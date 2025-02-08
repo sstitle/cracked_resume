@@ -16,3 +16,5 @@ https://www.tug.org/texlive/
 ```bash
 xelatex resume.tex
 ```
+
+The resulting document writes to ["resume.pdf"](./resume.pdf).
