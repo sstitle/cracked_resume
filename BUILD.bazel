@@ -3,41 +3,7 @@ load("@bazel_latex//:latex.bzl", "latex_document")
 latex_document(
     name = "my_report",
     srcs = glob(["*.tex"]),
-    bib_tool = "bibtex",  # Is the default
+    bib_tool = "biber",  # Is the default
     format = "pdf",  # Is the default
     main = "example.tex",
-)
-
-
-filegroup(
-    name = "texlive_dependencies",
-    srcs = [
-        "@bazel_latex//packages:hyperref",
-        "@bazel_latex//packages:array",
-        "@bazel_latex//packages:enumitem",
-        "@bazel_latex//packages:ragged2e",
-        "@bazel_latex//packages:geometry",
-        "@bazel_latex//packages:fancyhdr",
-        "@bazel_latex//packages:xcolor",
-        # "@bazel_latex//packages:ifxetex",
-        "@bazel_latex//packages:xifthen",
-        "@bazel_latex//packages:etoolbox",
-        # "@bazel_latex//packages:setspace",
-        "@bazel_latex//packages:fontspec",
-        "@bazel_latex//packages:unicode-math",
-        "@bazel_latex//packages:fontawesome5",
-        # "@bazel_latex//packages:roboto",
-        # "@bazel_latex//packages:sourcesanspro",
-        "@bazel_latex//packages:tcolorbox",
-        "@bazel_latex//packages:parskip",
-        # "@bazel_latex//packages:bookmark",
-    ],
-)
-
-latex_document(
-    name = "my_resume",
-    srcs = glob(["resume/cv/*.tex", "resume/fonts/*.ttf"]) + [":texlive_dependencies"],
-    bib_tool = "bibtex",
-    format = "pdf",
-    main = "resume/resume.tex",
 )
