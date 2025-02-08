@@ -1,8 +1,33 @@
 # cracked_resume
 Repository for manifesting your cracked developer resume
 
-## Install Bazel
+This repo is based on the Russell Group resume template found on Overleaf and GitHub:
 
-[Bazel](https://bazel.build/) is a free open-source build system install it using the instructions here:
+https://www.overleaf.com/latex/templates/russelresume/zqnypvvjsfvq
+https://github.com/themagicalmammal/Resume
 
-https://github.com/bazelbuild/bazelisk
+It's Nix-based compilation uses the LaTeX Nix examples from:
+
+https://github.com/Leixb/latex-template
+
+## Install Nix
+
+Use Determinate Systems instructions [here](https://github.com/DeterminateSystems/nix-installer):
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | \
+  sh -s -- install
+```
+
+## Build the PDF with LaTeX
+
+Build the resuling Resume PDF with "nix buid"
+
+```bash
+nix build
+```
+
+## Results
+
+The results are written locally to ["result/document.pdf"](result/document.pdf).
+
