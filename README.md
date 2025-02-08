@@ -11,6 +11,8 @@ https://github.com/themagicalmammal/Resume
 Follow the instructions for your platform on TexLive here:
 https://www.tug.org/texlive/
 
+## Build LaTeX to PDF
+
 ```bash
 xelatex resume.tex
 ```
