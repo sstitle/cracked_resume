@@ -6,23 +6,15 @@ This repo is based on the Russell Group resume template found on Overleaf and Gi
 https://www.overleaf.com/latex/templates/russelresume/zqnypvvjsfvq
 https://github.com/themagicalmammal/Resume
 
-It's Nix-based compilation uses the LaTeX Nix examples from:
+## Install TexLive
 
-https://github.com/Leixb/latex-template
+Follow the instructions for your platform on TexLive here:
+https://www.tug.org/texlive/
 
-## Install Nix
-
-Use Determinate Systems instructions [here](https://github.com/DeterminateSystems/nix-installer):
-
-```bash
-curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | \
-  sh -s -- install
-```
-
-## Build the PDF with LaTeX
-
-Build the resuling Resume PDF with "nix buid"
+## Build LaTeX to PDF
 
 ```bash
-nix build
+xelatex resume.tex
 ```
+
+The resulting document writes to ["resume.pdf"](./resume.pdf).
