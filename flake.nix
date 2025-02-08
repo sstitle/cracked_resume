@@ -20,7 +20,7 @@
         latex-packages = with pkgs; [
           (texlive.combine {
             inherit (texlive)
-              scheme-medium
+              scheme-full
               # array
               # enumitem
               # ragged2e
