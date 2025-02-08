@@ -20,26 +20,7 @@
         latex-packages = with pkgs; [
           (texlive.combine {
             inherit (texlive)
-              scheme-full
-              # array
-              # enumitem
-              # ragged2e
-              # geometry
-              # fancyhdr
-              # xcolor
-              # ifxetex
-              # xifthen
-              # etoolbox
-              # setspace
-              # fontspec
-              # unicode-math
-              # fontawesome5
-              # roboto
-              # sourcesanspro
-              # tcolorbox
-              # parskip
-              # hyperref
-              # bookmark
+              scheme-full # TODO (stitle): This is a huge package
               ;
           })
           which
