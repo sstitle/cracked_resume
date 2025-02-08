@@ -26,3 +26,8 @@ Build the resuling Resume PDF with "nix buid"
 ```bash
 nix build
 ```
+
+## Results
+
+The results are written locally to ["result/document.pdf"](result/document.pdf).
+
