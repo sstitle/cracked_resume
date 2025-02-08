@@ -26,7 +26,7 @@
 , texlive ? pkgs.texlive.combined.scheme-full
 
 # Pygments package to use (needed for minted)
-, pygments ? pkgs.python39Packages.pygments
+, pygments ? pkgs.python313Packages.pygments
 
 # Add system fonts
 # you can specify one font directly with: pkgs.fira-code
