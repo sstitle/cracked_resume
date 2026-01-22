@@ -128,11 +128,11 @@
             #separator
           ]
           #github_icon
-          #box[#link("https://github.com/" + author.github)[#author.github]]
+          #box[#link("https://" + author.github)[#author.github]]
           #separator
           #linkedin_icon
           #box[
-            #link("https://www.linkedin.com/in/" + author.linkedin)[#author.linkedin]
+            #link("https://" + author.linkedin)[#author.linkedin]
           ]
         ]
       ]
