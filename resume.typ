@@ -118,7 +118,7 @@
   "Dirac",
   "Manhattan, NY",
   "Senior Software Engineer",
-  "Aug. 2023 - Dec. 2025",
+  "August 2023 - December 2025",
 )
 
 #resume_item[
@@ -136,7 +136,7 @@
   "Nanotronics",
   "Brooklyn, NY",
   "Senior Software Developer",
-  "Jun. 2022 - Jun. 2023",
+  "June 2022 - June 2023",
 )
 
 #resume_item[
@@ -151,7 +151,7 @@
   "Realtime Robotics",
   "Boston, MA",
   "Robotics Engineer → Senior Software Engineer",
-  "Jul. 2018 - Feb. 2022",
+  "July 2018 - February 2022",
 )
 
 #resume_item[
