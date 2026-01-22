@@ -1,3 +1,4 @@
 resume*
-!resume.tex
 !resume.pdf
+!resume.typ
+.direnv/
