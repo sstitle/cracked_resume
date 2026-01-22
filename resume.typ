@@ -41,7 +41,7 @@
       phone: "(+1) 919-710-5430",
       homepage: "samtitle.com",
       github: "github.com/sstitle",
-      linkedin: "linkedin.com/in/sam-title-380722107/",
+      linkedin: "linkedin.com/in/sam-title-380722107",
       positions: (
         "Robotics Engineer",
         "Software Developer",
@@ -63,6 +63,7 @@
     strong[Shell], 
     strong[JavaScript],
     strong[C],
+    strong[Nix],
     strong[Verilog],
   )
 )
