@@ -43,8 +43,8 @@
       github: "github.com/sstitle",
       linkedin: "linkedin.com/in/sam-title-380722107",
       positions: (
-        "Robotics Engineer",
         "Software Developer",
+        "Robotics Engineer",
         "DevOps Engineer",
       )
   ),
