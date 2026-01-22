@@ -62,8 +62,8 @@
     strong[TypeScript], 
     strong[Shell], 
     strong[JavaScript],
-    "C",
-    "Verilog"
+    strong[C],
+    strong[Verilog],
   )
 )
 
@@ -85,9 +85,10 @@
   "Technologies",
   (
     strong[Distributed microservices],
-    strong[Event-driven and multithreaded models],
-    strong[Client-server architecture],
+    strong[event-driven and multithreaded models],
+    strong[client-server architecture],
     strong[TCP/IP sockets],
+    strong[relational and non-relational databases],
   )
 )
 
