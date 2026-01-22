@@ -104,12 +104,14 @@
 
   let contacts = {
     set box(height: 11pt)
+    set text(size: 9pt)
     
     let linkedin_icon = box(image("assets/icons/linkedin.svg"))
     let github_icon = box(image("assets/icons/square-github.svg"))
     let email_icon = box(image("assets/icons/square-envelope-solid.svg"))
     let phone_icon = box(image("assets/icons/square-phone-solid.svg"))
-    let separator = box(width: 5pt)
+    let home_icon = box(image("assets/icons/house-solid-full.svg"))
+    let separator = box(width: 3pt)
     
     align(center)[
       #block[
@@ -120,6 +122,11 @@
           #email_icon
           #box[#link("mailto:" + author.email)[#author.email]]
           #separator
+          #if "homepage" in author [
+            #home_icon
+            #box[#link("https://" + author.homepage)[#author.homepage]]
+            #separator
+          ]
           #github_icon
           #box[#link("https://github.com/" + author.github)[#author.github]]
           #separator
