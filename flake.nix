@@ -28,6 +28,7 @@
         }:
         let
           treefmtEval = inputs.treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
+          resume = import ./default.nix { inherit pkgs; };
         in
         {
           # Development shell with nickel and mask
@@ -49,6 +50,10 @@
               echo "Run 'nix fmt' to format all files."
             '';
           };
+
+          # Resume package
+          packages.resume = resume;
+          packages.default = resume;
 
           # for `nix fmt`
           formatter = treefmtEval.config.build.wrapper;

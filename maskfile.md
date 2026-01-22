@@ -15,6 +15,7 @@ echo "Hello World!"
 > Re-compile the resume
 
 ```bash
-export SOURCE_DATE_EPOCH=$(date +%s)
-typst compile resume.typ resume.pdf
+nix build .#resume --out-link result
+cp result/resume.pdf resume.pdf
+rm -f result
 ```
