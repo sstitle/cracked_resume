@@ -3,6 +3,8 @@ Repository for manifesting your cracked developer resume.
 
 I originally had this in LaTeX, but then I decided to update it to using [Typst](https://github.com/typst/typst). Previously, I was using Overleaf for my LaTeX template but they rug-pulled me when my resume was taking "too long to compile". It was pretty easy to get this moved over to Typst by following this [example](https://github.com/bamboovir/typst-resume-template/tree/main).
 
+You can view the result [here](./resume.pdf).
+
 ## Getting Started
 
 ### Prerequisites
