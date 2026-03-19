@@ -35,6 +35,7 @@
             src = ./.;
             nativeBuildInputs = [ pkgs.typst ];
             buildPhase = ''
+              export SOURCE_DATE_EPOCH=1
               typst compile resume.typ resume.pdf
             '';
             installPhase = ''
