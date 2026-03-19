@@ -116,7 +116,7 @@
 #resume_section("Experience")
 
 #work_experience_item_header(
-  "D-Wave Quantum",
+  link("https://www.dwavequantum.com/")[D-Wave Quantum],
   "New Haven, CT",
   "Full-Stack Software Engineer",
   "March 2026 - Present",
@@ -127,7 +127,7 @@
 ]
 
 #work_experience_item_header(
-  "Dirac",
+  link("https://www.diracinc.com")[Dirac],
   "Manhattan, NY",
   "Senior Software Engineer",
   "August 2023 - December 2025",
@@ -144,7 +144,7 @@
 ]
 
 #work_experience_item_header(
-  "Nanotronics",
+  link("https://www.nanotronics.ai")[Nanotronics],
   "Brooklyn, NY",
   "Senior Software Developer",
   "June 2022 - June 2023",
@@ -158,7 +158,7 @@
 ]
 
 #work_experience_item_header(
-  "Realtime Robotics",
+  link("https://www.rtr.ai")[Realtime Robotics],
   "Boston, MA",
   "Robotics Engineer → Senior Software Engineer",
   "July 2018 - February 2022",
