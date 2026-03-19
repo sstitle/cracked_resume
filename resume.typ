@@ -116,6 +116,17 @@
 #resume_section("Experience")
 
 #work_experience_item_header(
+  "D-Wave Quantum",
+  "New Haven, CT",
+  "Full-Stack Software Engineer",
+  "March 2026 - Present",
+)
+
+#resume_item[
+  - Developed web applications supporting QPU development.
+]
+
+#work_experience_item_header(
   "Dirac",
   "Manhattan, NY",
   "Senior Software Engineer",
@@ -125,11 +136,10 @@
 #resume_item[
   - *BuildOS:* Developed Python and C++ infrastructure for physics simulation of mechanical rigid body disassembly.
   - Developed distributed microservices architecture using gRPC in Go, TypeScript, Python, and C++.
-  - Integrated a new CAD kernel, enabling colored output in the JavaScript front‑end, and added support for 3 additional CAD formats.
+  - Integrated a new CAD kernel, enabling colored output in the web front‑end, and added support for 3 additional CAD formats.
   - Achieved 5x faster C++ build times using Nix, CMake, Ninja and sccache.
-  - Developed public API implementation for our web SaaS product enabling enterprise customer engagement with OpenAPI and Go.
-  - Implemented continuous integration stages for code formatting, linting, unit testing, integration testing and deployment with GitHub actions.
-  - Championed team migration from Gitflow to trunk‑based development leading to release cycles going from 3 months to 2 weeks.
+  - Implemented a public API for web SaaS product enabling enterprise customer engagement with OpenAPI and Go.
+  - Implemented CI/CD pipeline and championed migration from Gitflow to trunk-based development, cutting release cycles from 3 months to 2 weeks.
   - Maintained live servers with AWS Cloud infrastructure using Lambda, EC2, S3, and DynamoDB.
 ]
 
@@ -141,7 +151,6 @@
 )
 
 #resume_item[
-  - *Modular Autoloader:* Developed flexible architecture for implementing new equipment front-end modules for semiconductor manufacturing.
   - Wrote C++ abstractions for robots and sensors used in an AI defect analysis system for microscopic inspection of various substrate materials.
   - Integrated sample-handling robots, external motors, pneumatic components, sensors, and other controls for a microscopic scanning system.
   - Contributed to 4 new product releases with more than 12 new networked hardware components for handling silicon wafers, semiconductor devices, glass and copper panels, and biological specimens.
