@@ -30,6 +30,29 @@
           treefmtEval = inputs.treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
         in
         {
+          packages.resume = pkgs.stdenv.mkDerivation {
+            name = "resume";
+            src = ./.;
+            nativeBuildInputs = [ pkgs.typst ];
+            buildPhase = ''
+              typst compile resume.typ resume.pdf
+            '';
+            installPhase = ''
+              mkdir -p $out
+              cp resume.pdf $out/resume.pdf
+            '';
+          };
+
+          packages.default = config.packages.resume;
+
+          apps.default = {
+            type = "app";
+            program = toString (pkgs.writeShellScript "copy-resume" ''
+              cp ${config.packages.resume}/resume.pdf ./resume.pdf
+              echo "resume.pdf written to current directory"
+            '');
+          };
+
           # Development shell with nickel and mask
           devShells.default = pkgs.mkShell {
             buildInputs = with pkgs; [
