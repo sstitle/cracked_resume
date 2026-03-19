@@ -1,7 +1,6 @@
 #import "templates/awesome/template.typ": *
 
-// datetime.today() automatically uses SOURCE_DATE_EPOCH if set (for Nix builds)
-#let today = datetime.today()
+#let datestr = sys.inputs.at("builddate", default: datetime.today().display("[month repr:long] [day], [year]"))
 
 // Override page margins to be narrower (wider content area)
 #set page(margin: (left: 5mm, right: 5mm, top: 6mm, bottom: 6mm))
@@ -48,7 +47,7 @@
         "DevOps Engineer",
       )
   ),
-  date: today.display("[month repr:long] [day], [year]")
+  date: datestr
 )
 
 #resume_section("Skills")

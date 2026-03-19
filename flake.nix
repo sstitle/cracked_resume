@@ -33,14 +33,17 @@
           packages.resume = pkgs.stdenv.mkDerivation {
             name = "resume";
             src = ./.;
-            nativeBuildInputs = [ pkgs.typst ];
+            nativeBuildInputs = [ pkgs.typst pkgs.tzdata ];
             buildPhase = ''
-              export SOURCE_DATE_EPOCH=${toString self.lastModified}
-              typst compile resume.typ resume.pdf
+              export TZDIR="${pkgs.tzdata}/share/zoneinfo"
+              BUILD_DATE=$(TZ=America/New_York date -d @${toString self.lastModified} '+%B %-d, %Y')
+              typst compile --input builddate="$BUILD_DATE" resume.typ resume.pdf
             '';
             installPhase = ''
               mkdir -p $out
               cp resume.pdf $out/resume.pdf
+              echo "lastModified: ${toString self.lastModified}" > $out/buildinfo
+              echo "builddate: $BUILD_DATE" >> $out/buildinfo
             '';
           };
 
@@ -49,7 +52,8 @@
           apps.default = {
             type = "app";
             program = toString (pkgs.writeShellScript "copy-resume" ''
-              cp ${config.packages.resume}/resume.pdf ./resume.pdf
+              cat ${config.packages.resume}/buildinfo
+              install -m 644 ${config.packages.resume}/resume.pdf ./resume.pdf
               echo "resume.pdf written to current directory"
             '');
           };
